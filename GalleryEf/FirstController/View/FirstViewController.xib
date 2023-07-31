@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FirstViewController" customModule="GalleryEf" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="VSV-Aj-uqX" id="RJn-s1-Jnk"/>
+                <outlet property="takePhoto" destination="Hgw-z5-M30" id="Iz9-qk-oLh"/>
+                <outlet property="takeVideo" destination="PCw-me-fRJ" id="Sad-7h-tk3"/>
+                <outlet property="view" destination="iN0-l3-epB" id="HqS-NT-9KN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VSV-Aj-uqX">
+                    <rect key="frame" x="0.0" y="59" width="393" height="559"/>
+                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hgw-z5-M30" customClass="CustomButton" customModule="GalleryEf" customModuleProvider="target">
+                    <rect key="frame" x="50" y="668" width="293" height="45"/>
+                    <color key="backgroundColor" red="0.73725490199999999" green="0.8291471601" blue="0.91768586640000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="rYU-Q1-AMP"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Photo"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="didTabTakePhoto:" destination="-1" eventType="touchUpInside" id="mIO-Qg-hML"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PCw-me-fRJ" customClass="CustomButton" customModule="GalleryEf" customModuleProvider="target">
+                    <rect key="frame" x="50" y="743" width="293" height="45"/>
+                    <color key="backgroundColor" red="0.73725490199999999" green="0.82745098039999998" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="VS0-U6-H7z"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Video"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="didTabTakeVideo:" destination="-1" eventType="touchUpInside" id="E6y-9H-ivX"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Hgw-z5-M30" firstAttribute="top" secondItem="VSV-Aj-uqX" secondAttribute="bottom" constant="50" id="1Hl-0h-ctH"/>
+                <constraint firstItem="Hgw-z5-M30" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="50" id="24t-AO-LJZ"/>
+                <constraint firstItem="PCw-me-fRJ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="50" id="2BR-Mj-LiE"/>
+                <constraint firstItem="PCw-me-fRJ" firstAttribute="top" secondItem="Hgw-z5-M30" secondAttribute="bottom" constant="30" id="84g-TN-EyD"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="VSV-Aj-uqX" secondAttribute="trailing" id="8ds-SS-fZb"/>
+                <constraint firstItem="VSV-Aj-uqX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="9QP-eE-zro"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="PCw-me-fRJ" secondAttribute="trailing" constant="50" id="bRe-5N-KLL"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Hgw-z5-M30" secondAttribute="trailing" constant="50" id="dDh-1k-YnM"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="VSV-Aj-uqX" secondAttribute="bottom" constant="200" id="hYH-8y-ajw"/>
+                <constraint firstItem="VSV-Aj-uqX" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="vUY-Rt-NDR"/>
+            </constraints>
+            <point key="canvasLocation" x="10" y="20"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="Hgw-z5-M30">
+            <size key="intrinsicContentSize" width="66.666666666666671" height="33.333333333333336"/>
+        </designable>
+        <designable name="PCw-me-fRJ">
+            <size key="intrinsicContentSize" width="65.666666666666671" height="33.333333333333336"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
